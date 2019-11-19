@@ -8,37 +8,33 @@ namespace PhoneBookSample
 {
     class PhoneBook
     {
+        List<Contact> contacts = new List<Contact>();
+        GetDetails getDetails = new GetDetails();
         public Contact AddContact()
         {
-            Contact Contact = new Contact();
+            Contact contact = new Contact();
+            getDetails.GetData();
+            contacts.Add(contact);
+            return contact;
+            
+           
+        }
+        /*   public void DeleteContact(List<Contact> contacts)
+  {
+      Console.Write("Enter phone number you want to delete:");
+      double phonenumber =Convert.ToDouble(Console.ReadLine());
+      contacts.RemoveAll(mobileNumber => mobileNumber.phoneNumber == phonenumber);
+      Console.Write("Contact deleted successfully");
 
-            Console.WriteLine("Enter firstName : ");
-            Contact.firstName = Console.ReadLine();
-            Console.WriteLine("Enter lastName : ");
-            Contact.lastName = Console.ReadLine();
-            Console.WriteLine("Enter phoneNumber : ");
-            Contact.phoneNumber =Convert.ToDouble( Console.ReadLine());
-            Console.WriteLine("Enter emailId : ");
-            Contact.emailId = Console.ReadLine();
-            Console.Write("Contact added successfully.");
-            return Contact;
-           
-        }
-        public void DeleteContact(List<Contact> contacts)
-        {
-            Console.Write("Enter phone number you want to delete:");
-            double phonenumber =Convert.ToDouble(Console.ReadLine());
-            contacts.RemoveAll(mobileNumber => mobileNumber.phoneNumber == phonenumber);
-            Console.Write("Contact deleted successfully");
-           
-        }
-        public void ShowContact(List<Contact> contacts)
-        {
-            foreach (var person in contacts)
-            {
-                Console.WriteLine("Name : " + person.firstName + " " + person.lastName + ",PhoneNumber :" + person.phoneNumber + ", Email Id:" + person.emailId);
-            }
-           
-        }
+  }
+  public void ShowContact(List<Contact> contacts)
+  {
+      foreach (var person in contacts)
+      {
+          Console.WriteLine("Name : " + person.firstName + " " + person.lastName + ",PhoneNumber :" + person.phoneNumber + ", Email Id:" + person.emailId);
+      }
+
+
+  }*/
     }
 }
