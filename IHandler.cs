@@ -1,7 +1,7 @@
 namespace PhoneBookSample
 {
-    internal interface IHandler
+     interface IHandler
     {
-        Contact GetData();
+        Contact GetData(Contact contact);
     }
 }
