@@ -18,5 +18,5 @@ namespace PhoneBookSample
               return contact;
           }
 
-        }
+      }
   }
